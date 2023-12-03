@@ -1,6 +1,3 @@
-#2. Design interface with Turtle (Play area, status area, scoreboard, selection, .gif etc)
-#3. Marble placement using marble file to draw circles and marble guess panel and mouse clicks
-
 from turtle import *
 import random
 from Marble import *
@@ -29,13 +26,13 @@ def gif_register(t):
     t.screen.setup(1000,800)
 
     # gif messages
-    t.screen.register_shape("Final Project/leaderboard_error.gif")
-    t.screen.register_shape("Final Project/file_error.gif")
+    t.screen.register_shape("leaderboard_error.gif")
+    t.screen.register_shape("file_error.gif")
 
     # Interactive gif buttons
-    t.screen.addshape("Final Project/checkbutton.gif")
-    t.screen.addshape("Final Project/xbutton.gif")  
-    t.screen.addshape("Final Project/quit.gif") 
+    t.screen.addshape("checkbutton.gif")
+    t.screen.addshape("xbutton.gif")  
+    t.screen.addshape("quit.gif") 
 
 def gif_buttons(t, path, x_cor, y_cor):
     """Sets up gif buttons"""
@@ -50,9 +47,9 @@ def marble_win():
         # Create a new turtle for pop up window with winning message
         win_turtle = turtle.Screen()
         win_turtle.title("Win Window")
-        win_turtle.addshape("Final Project/winner.gif")
+        win_turtle.addshape("winner.gif")
         win_message = Turtle()
-        gif_buttons(win_message, "Final Project/winner.gif", 0, 0)
+        gif_buttons(win_message, "winner.gif", 0, 0)
 
         # Pause the message for a few seconds, then close everything
         win_turtle.update()
@@ -63,9 +60,9 @@ def marble_lose():
         # Create a new turtle for pop up window with winning message
         lose_turtle = turtle.Screen()
         lose_turtle.title("Lose Window")
-        lose_turtle.addshape("Final Project/Lose.gif")
+        lose_turtle.addshape("Lose.gif")
         lose_message = Turtle()
-        gif_buttons(lose_message, "Final Project/Lose.gif", 0, 0)
+        gif_buttons(lose_message, "Lose.gif", 0, 0)
 
         # Pause the message for a few seconds, then close everything
         lose_turtle.update()
@@ -76,9 +73,9 @@ def marble_quit(x_cor, y_cor):
     # Create a new turtle for pop up window with quit message
     quit_turtle = turtle.Screen()
     quit_turtle.title("Quit Window")
-    quit_turtle.addshape("Final Project/quitmsg.gif")
+    quit_turtle.addshape("quitmsg.gif")
     quit_message = Turtle()
-    gif_buttons(quit_message, "Final Project/quitmsg.gif", 0, 0)
+    gif_buttons(quit_message, "quitmsg.gif", 0, 0)
 
     # Pause the message for a few seconds, then close everything
     quit_turtle.update()
@@ -89,9 +86,9 @@ def file_error(x_cor, y_cor):
     # Create a new turtle for pop up window with quit message
     file_turtle = turtle.Screen()
     file_turtle.title("File Error Window")
-    file_turtle.addshape("Final Project/file_error.gif")
+    file_turtle.addshape("file_error.gif")
     file_message = Turtle()
-    gif_buttons(file_message, "Final Project/file_error.gif", 0, 0)
+    gif_buttons(file_message, "file_error.gif", 0, 0)
 
     # Pause the message for a few seconds, then close everything
     file_message.update()
@@ -102,9 +99,9 @@ def leader_error(x_cor, y_cor):
     # Create a new turtle for pop up window with quit message
     leader_turtle = turtle.Screen()
     leader_turtle.title("Leaderboard Error Window")
-    leader_turtle.addshape("Final Project/leaderboard_error.gif")
+    leader_turtle.addshape("leaderboard_error.gif")
     leader_message = Turtle()
-    gif_buttons(leader_message, "Final Project/leaderboard_error.gif", 0, 0)
+    gif_buttons(leader_message, "leaderboard_error.gif", 0, 0)
 
     # Pause the message for a few seconds, then close everything
     leader_message.update()
@@ -126,9 +123,9 @@ def main():
     turtle_check = Turtle()
     turtle_X = Turtle()
     turtle_quit = Turtle()
-    gif_buttons(turtle_check, "Final Project/checkbutton.gif", 0, -290)
-    gif_buttons(turtle_X, "Final Project/xbutton.gif", 70, -290)
-    gif_buttons(turtle_quit, "Final Project/quit.gif", 350, -290)
+    gif_buttons(turtle_check, "checkbutton.gif", 0, -290)
+    gif_buttons(turtle_X, "xbutton.gif", 70, -290)
+    gif_buttons(turtle_quit, "quit.gif", 350, -290)
 
     # Draw masterlist
     draw_rectangle(t, -490, 390, 600, 600)
